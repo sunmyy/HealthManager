@@ -267,6 +267,33 @@
             login() {
                 this.$router.push('/login');
             },
+            // mounted() {
+            //     // http://localhost:8081//index/img
+            //     let imgUrl='222.24.63.60:8081//index/img'
+            //     let noticeUrl = '222.24.63.60:8081//index/noticeNameList'
+            //     let downloadUrl = '222.24.63.60:8081//index/downloadNameList'
+            //     // console.log(imgUrl);
+            //     this.$http.fetchData(imgUrl).then(res=>{
+            //         console.log(res);
+            //         this.carouselImgs=res;
+            //     }).catch(error=>{
+            //         console.log(error);
+            //     });
+            //     this.$http.fetchData(noticeUrl).then(
+            //             res=>{
+            //                 // console.log(res);
+            //                 this.noticeNameList=res;
+            //                 // console.log(res)
+            //             }).catch(error=>{
+            //         console.log(error);
+            //     });
+            //     this.$http.fetchData(downloadUrl).then(res=>{
+            //         // console.log(res);
+            //         this.downLoadList=res;
+            //     }).catch(error=>{
+            //         console.log(error);
+            //     });
+            // },
         }
     }
 </script>

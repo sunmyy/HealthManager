@@ -7,6 +7,7 @@ import * as echarts from 'echarts'; // 画图
 import './assets/css/icon.css'
 import auth from "./utils/auth";
 
+
 const app = createApp(App)
 installElementPlus(app)
 app.config.globalProperties.$auth=auth; // vue3的全局变量语法

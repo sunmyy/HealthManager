@@ -64,16 +64,16 @@ export default {
                 //     title: "系统首页"
                 // },
 
-                {
-                    icon: "el-icon-lx-copy",
-                    index: "/tabs",
-                    title: "tab选项卡"
-                },
-                {
-                    icon: "el-icon-lx-calendar",
-                    index: "/upload",
-                    title: "文件上传"
-                }
+                // {
+                //     icon: "el-icon-lx-copy",
+                //     index: "/tabs",
+                //     title: "tab选项卡"
+                // },
+                // {
+                //     icon: "el-icon-lx-calendar",
+                //     index: "/upload",
+                //     title: "文件上传"
+                // }
             ],
             items_teacher:[
 
@@ -158,19 +158,24 @@ export default {
             ],
             items_student:[
                 {
-                    icon: "el-icon-menu",
-                    index: "/student/pe_details",
-                    title: "体测信息"
+                icon: "el-icon-lx-profile",
+                index: "/student/personal_info" ,
+                title: "个人信息"
                 },
                 {
-                    icon: "el-icon-menu",
-                    index: "/student/health_feedback",
-                    title: "健康反馈信息"
+                  icon: "el-icon-lx-text",
+                  index: "/student/pe_details",
+                  title: "体测信息"
                 },
                 {
-                    icon: "el-icon-menu",
-                    index: "/student/self_info",
-                    title: "个人信息修改"
+                  icon: "el-icon-lx-read",
+                  index: "/student/health_feedback",
+                  title: "健康反馈信息"
+                },
+                {
+                  icon: "el-icon-lx-edit",
+                  index: "/student/self_info",
+                  title: "个人信息修改"
                 },
             ]
         };

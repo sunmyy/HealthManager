@@ -1,8 +1,24 @@
 <template>
+
     <div>
-        <div id="health" style="width: 600px;height:400px;margin: auto"></div>
-        <div id="rank" style="width: 600px;height:400px;margin: auto"></div>
+
+        <div>
+            <el-breadcrumb separator="/">
+                <el-breadcrumb-item>
+                    <i class="el-icon-lx-calendar"></i> 身体健康趋势变化图
+                </el-breadcrumb-item>
+
+            </el-breadcrumb>
+        </div>
+        <div>
+            <div id="health" style="width: 600px;height:400px;margin: auto"></div>
+            <div id="rank" style="width: 600px;height:400px;margin: auto"></div>
+
+        </div>
+
     </div>
+
+
 </template>
 
 <script>

@@ -1,5 +1,8 @@
 <template>
-    <div>个人信息</div>
+    <div>
+        <el-breadcrumb separator="/">
+            <el-breadcrumb-item><i class="el-icon-lx-copy"></i> 个人信息</el-breadcrumb-item>
+        </el-breadcrumb></div>
 </template>
 
 <script>

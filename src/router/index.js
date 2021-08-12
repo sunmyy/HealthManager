@@ -7,7 +7,7 @@ import Home from "../views/Home.vue";
 const routes = [
     {
         path: '',
-        redirect: '/teacher',
+        redirect: '/news',
     },
     {
         path: '/news',
@@ -138,7 +138,6 @@ const routes = [
                             title: '体测异常信息管理',
                         }
                     },
-
                     // 诊断与健康干预
                     {
                         path: 'health_prescribe/',
@@ -185,6 +184,16 @@ const routes = [
                 },
                 children: [
 
+
+                    // 个人信息
+                    {
+                        path:'personal_info/',
+                        component: () => import('../views/student/Personal'),
+                        meta: {
+                            title: '个人信息'
+                        }
+
+                    },
                     // 体测信息
                     {
                         path: 'pe_details/',
