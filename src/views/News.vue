@@ -8,16 +8,10 @@
         <el-main>
             <el-row>
                 <div class="block">
-                    <el-carousel height="500px">
-                        <el-carousel-item>
-                            <img src="../assets/img/news/20.png" alt=""
+                    <el-carousel height="500px" >
+                        <el-carousel-item v-for="img of carouselImgs" :key="img.id">
+                            <img :src="img.imgIndex" alt=""
                             style="width: 100%;height: 100%">
-                        </el-carousel-item>
-                        <el-carousel-item><img src="../assets/img/news/70.jpg" alt=""
-                                               style="width: 100%;height: 100%">
-                        </el-carousel-item>
-                        <el-carousel-item><img src="../assets/img/news/80.jpg" alt=""
-                        style="width: 100%;height: 100%">
                         </el-carousel-item>
 
                     </el-carousel>
@@ -263,38 +257,34 @@
 <script>
     export default {
         name: "news",
+        data(){
+            return {
+                carouselImgs:[], // 轮播图
+            }
+        },
         methods: {
             login() {
                 this.$router.push('/login');
             },
-            // mounted() {
-            //     // http://localhost:8081//index/img
-            //     let imgUrl='222.24.63.60:8081//index/img'
-            //     let noticeUrl = '222.24.63.60:8081//index/noticeNameList'
-            //     let downloadUrl = '222.24.63.60:8081//index/downloadNameList'
-            //     // console.log(imgUrl);
-            //     this.$http.fetchData(imgUrl).then(res=>{
-            //         console.log(res);
-            //         this.carouselImgs=res;
-            //     }).catch(error=>{
-            //         console.log(error);
-            //     });
-            //     this.$http.fetchData(noticeUrl).then(
-            //             res=>{
-            //                 // console.log(res);
-            //                 this.noticeNameList=res;
-            //                 // console.log(res)
-            //             }).catch(error=>{
-            //         console.log(error);
-            //     });
-            //     this.$http.fetchData(downloadUrl).then(res=>{
-            //         // console.log(res);
-            //         this.downLoadList=res;
-            //     }).catch(error=>{
-            //         console.log(error);
-            //     });
-            // },
-        }
+
+        },
+        mounted() {
+            // http://localhost:8081//index/img
+            // 这里以轮播图示例
+
+
+            let imgUrl='/index/img' // 不需要host:port 前缀 因为 已经在axios create的时候定义好了
+            // 详情见 axios官网
+
+            // console.log(imgUrl);
+            this.$http.fetchData(imgUrl).then(res=>{
+                console.log(res); // 可以打印出来观察一下数据
+                this.carouselImgs=res;
+            }).catch(error=>{
+                console.log(error);
+            });
+
+        },
     }
 </script>
 
